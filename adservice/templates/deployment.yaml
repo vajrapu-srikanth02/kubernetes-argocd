@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice
+  labels:
+    app: adservice
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: adservice
+      project: hipstershop
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: adservice
+        project: hipstershop
+        tier: app
+    spec:
+      containers:
+        - name: adservice
+          image: "registry.gitlab.com/demo6955435/adservice:{{ .Values.deployment.imageVersion }}"
+          ports:
+          - containerPort: 9555
+          envFrom:
+          - configMapRef:
+              name: adservice
+          resources:
+            requests:
+              cpu: 100m
+              memory: 220Mi
+            limits:
+              cpu: 200m
+              memory: 450Mi
+      imagePullSecrets: # if the image is stored in private repository
+        - name: my-registry-secret

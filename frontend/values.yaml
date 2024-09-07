@@ -1,0 +1,8 @@
+deployment:
+  replicas: 2
+  imageVersion: v1
+
+autoscaling:
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 30
