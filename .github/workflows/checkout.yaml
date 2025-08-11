@@ -15,6 +15,7 @@ jobs:
         sparse-checkout: cartservice/templates
         # sparse-checkout-cone-mode: true
         fetch-depth: 1
+        clean: true
     - name: list items
       run: |
         ls -ltr
