@@ -1,89 +1,88 @@
-
 name: test inputs limit range
 
 on:
   workflow_dispatch:
-  inputs:
-   chartA:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - A
-   chartB:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - B
-   chartC:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - C
-   chartD:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - D
-   chartE:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - E
-   chartF:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - F
-   chartG:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - G
-   chartH:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - H
-   chartI:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - I
-   chartJ:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - J
-   chartK:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - K
-   chartL:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - L
-   chartM:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - M
-   chartN:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - N
-   chartO:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - O
-   chartP:
-     required: false
-     type: choice  # string, number, environment, boolean, choice
-     options:
-     - P
+    inputs:
+     chartA:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - A
+     chartB:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - B
+     chartC:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - C
+     chartD:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - D
+     chartE:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - E
+     chartF:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - F
+     chartG:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - G
+     chartH:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - H
+     chartI:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - I
+     chartJ:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - J
+     chartK:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - K
+     chartL:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - L
+     chartM:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - M
+     chartN:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - N
+     chartO:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - O
+     chartP:
+       required: false
+       type: choice  # string, number, environment, boolean, choice
+       options:
+       - P
 env:
   chart_list: "${{ inputs.chartA }} ${{ inputs.chartB }} ${{ inputs.chartC }} ${{ inputs.chartD }} ${{ inputs.chartE }} ${{ inputs.chartF }} ${{ inputs.chartG }} ${{ inputs.chartH }} ${{ inputs.chartI }} ${{ inputs.chartJ }} ${{ inputs.chartK }} ${{ inputs.chartL }} ${{ inputs.chartM }} ${{ inputs.chartN }} ${{ inputs.chartO }} ${{ inputs.chartP }}" 
 
