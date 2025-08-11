@@ -13,7 +13,7 @@ jobs:
         repository: 'vajrapu-srikanth02/kubernetes-argocd'
         ref: main
         sparse-checkout: cartservice/templates
-        sparse-checkout-cone-mode: true
+        # sparse-checkout-cone-mode: true
         fetch-depth: 1
     - name: list items
       run: |
