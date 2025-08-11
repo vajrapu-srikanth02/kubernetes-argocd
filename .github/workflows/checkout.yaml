@@ -1,0 +1,25 @@
+name: 'sparse checkout'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sparse_checkout:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sparse Checkout
+      uses: actions/checkout@v5.0.0
+      with:
+        repository: 'vajrapu-srikanth02/kubernetes-argocd'
+        ref: main
+        sparse-checkout: cartservice/templates
+        sparse-checkout-cone-mode: true
+        fetch-depth: 0
+    - name: list items
+      run: |
+        ls -ltr
+        pwd
+        cd cartservice
+        ls -ltr
+        cd templates
+        ls -ltr
